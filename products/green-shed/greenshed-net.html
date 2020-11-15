@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../css/contact-details.css">
+  <link rel="stylesheet" href="../../css/logo.css">
+  <link rel="stylesheet" href="../../css/navbar.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <style>
+    
+    *{
+      box-sizing: border-box;
+    }
+    
+    .row{
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      height: 100% !important;
+
+    }
+    .lower{
+      height: 40vh;
+      width: 25%;
+      padding-top: 5%;
+    }
+    @media screen and (max-width: 700px) {
+      .row {   
+        flex-direction: column;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      .lower {   
+        width:80%;
+        padding-left: 20%; 
+      }
+    }
+    .carousel-inner img {
+      width: 100%;
+      height: 35%;
+     
+    }
+    .main{
+      background-image: url("../Tree-Guard/background.jpg");
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+      height:80vh; /* You must set a specified height */
+    }
+ 
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+
+    /* For mobile phones: */
+    [class*="col-"] {
+     width: 100%;
+    }
+
+   @media only screen and (min-width: 600px) {
+    /* For tablets: */
+     .col-s-1 {width: 8.33%;}
+     .col-s-2 {width: 16.66%;}
+     .col-s-3 {width: 25%;}
+     .col-s-4 {width: 33.33%;}
+     .col-s-5 {width: 41.66%;}
+     .col-s-6 {width: 50%;}
+     .col-s-7 {width: 58.33%;}
+     .col-s-8 {width: 66.66%;}
+     .col-s-9 {width: 75%;}
+     .col-s-10 {width: 83.33%;}
+     .col-s-11 {width: 91.66%;}
+     .col-s-12 {width: 100%;}
+    }
+   @media only screen and (min-width: 768px) {
+     /* For desktop: */
+     .col-1 {width: 8.33%;}
+     .col-2 {width: 16.66%;}
+     .col-3 {width: 25%;}
+     .col-4 {width: 33.33%;}
+     .col-5 {width: 41.66%;}
+     .col-6 {width: 50%;}
+     .col-7 {width: 58.33%;}
+     .col-8 {width: 66.66%;}
+     .col-9 {width: 75%;}
+     .col-10 {width: 83.33%;}
+     .col-11 {width: 91.66%;}
+     .col-12 {width: 100%;}
+    }
+    
+    .social-buttons {
+      display: inline-block;
+      /* background: rgba(256, 256, 256, 0.5); */
+      /* padding: 20px; */
+      /* padding-bottom: 5px; */
+      border-radius: 10px;
+      text-align: center;
+      margin: 20px 10px;
+    }
+
+    .social-buttons .social-margin {
+      /* Helper class to divide the icons */
+      margin-right: 15px;
+    }
+
+    .social-buttons a,
+    .social-buttons a:hover,
+    .social-buttons a:focus,
+    .social-buttons a:active {
+      text-decoration: none;
+    }
+
+    .social-buttons .social-icon {
+      /* margin-bottom: 15px; */
+      box-sizing: border-box;
+      -moz-border-radius: 138px;
+      -webkit-border-radius: 138px;
+      border-radius: 138px;
+      border: 5px solid;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      line-height: 1px;
+      /* padding-top: 11px; */
+      transition: all 0.5s;
+      /* Facebook Button Styling */
+      /* Twitter Button Styling */
+      /* Google+ Button Styling */
+      /* Linkedin Button Styling */
+      /* Pinterest Button Styling */
+      /* Behance Button Styling */
+      /* Github Button Styling */
+      /* Youtube Button Styling */
+      /* Soundcloud Button Styling */
+    }
+
+    .social-buttons .social-icon:hover {
+      transform: rotate(360deg) scale(1.3);
+    }
+
+    .social-buttons .social-icon.facebook {
+      font-size: 22px;
+      padding-top: 9px;
+      border-color: #3b5998;
+      background-color: #3b5998;
+      color: #fff;
+    }
+
+    .social-buttons .social-icon.facebook:hover {
+      background-color: #fff;
+      color: #3b5998;
+    }
+
+    .social-buttons .social-icon.twitter {
+      font-size: 22px;
+      padding-top: 10px;
+      padding-left: 2px;
+      border-color: #55acee;
+      background-color: #55acee;
+      color: #fff;
+    }
+
+    .social-buttons .social-icon.twitter:hover {
+      background-color: #fff;
+      color: #55acee;
+    }
+
+
+
+    .social-buttons .social-icon.linkedin {
+      font-size: 24px;
+      padding-top: 8px;
+      padding-left: 1px;
+      background-color: #0976b4;
+      color: #fff;
+      border-color: #0976b4;
+    }
+
+    .social-buttons .social-icon.linkedin:hover {
+      background-color: #fff;
+      color: #0976b4;
+    }
+
+
+
+    .social-buttons .social-icon.youtube {
+      font-size: 22px;
+      padding-top: 9px;
+      padding-left: 0px;
+      background-color: #b00;
+      color: #fff;
+      border-color: #b00;
+    }
+
+    .social-buttons .social-icon.youtube:hover {
+      background-color: #fff;
+      color: #b00;
+    }
+
+    .social-buttons .social-icon.soundcloud {
+      font-size: 22px;
+      padding-top: 9px;
+      padding-left: 0px;
+      /* background-color: #ff3a00; */
+      background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+      color: #fff;
+      border-color: #ff3a00;
+    }
+
+    .social-buttons .social-icon.soundcloud:hover {
+      background-color: #fff;
+      color: #fff;
+    }
+
+    .footer {
+   /* position: sticky; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:  #87e75a;
+   color: white;
+   text-align: center;
+   height: 3%;
+   padding: 1%;
+}
+
+
+.containers {
+      position: relative;
+      text-align: center;
+      color: rgba(24, 24, 6, 0.795);
+    }
+
+
+    .centered {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="col-12 col-s-12 contact-details">
+        <div style="display:flex;"> <i class="fa fa-phone" style="font-size:24px"></i>
+          <h5> +91-9437053607,+91-9937072198 | </h5>
+        </div>
+        <div style="display:flex;"><i class="material-icons" style="font-size:24px">email</i>
+          <h5> hscsbp@gmail.com </h5>
+        </div>
+    
+      </div>
+    
+      <div class="row" style="background-color:  rgb(232, 250, 232);">
+        <div class="col-8 logo">
+          <div style="padding-left: 2%;">
+            <img src="../../assets/Logo.png" alt="logo" width="130px" height="80px">
+          </div>
+         
+        </div>
+        <div class="col-4">
+          <div class="social-buttons">
+            <!-- facebook  Button -->
+            <a href="https://www.facebook.com/AlluArjun/" target="blank" class="social-margin">
+              <div class="social-icon facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </div>
+            </a>
+           
+            <!-- LinkedIn Button -->
+            <a href="http://linkedin.com/" class="social-margin" target="blank">
+              <div class="social-icon linkedin">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </div>
+            </a>
+           
+            <!-- Youtube Button -->
+            <a href="http://youtube.com/" target="blank" class="social-margin">
+              <div class="social-icon youtube">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </div>
+            </a>
+         
+            <!-- Soundcloud Button -->
+            <a href="http://soundcloud.com/" target="blank" class="social-margin">
+              <div class="social-icon soundcloud">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+            </a>
+            <!-- TwitterButton -->
+            <a href="http://twitter.com/" target="blank" class="social-margin">
+              <div class="social-icon twitter">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </div>
+            </a>
+          </div>
+        
+        </div>
+      </div>
+    
+      
+      <!--Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #87e75a;">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+          aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html" ><h5><strong>Home</strong></h5>
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../product.html"><h5><strong>Products</strong></h5></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../gallery.html"><h5><strong>Gallery</strong></h5></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../videos.html"><h5><strong>Videos</strong></h5></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../aboutus.html"><h5><strong>About Us</strong></h5></a>
+            </li>
+    
+          </ul>
+    
+        </div>
+      </nav>
+   
+  <div class="col-12 container-fluid main" style="padding-top:2%;height: 100%;display: flex;flex-wrap: wrap; ">
+
+    <div class="col-12 row">
+        <div class="col-9 " style="padding-left:0%;">
+          <h2 style=" font-family: 'Oswald', sans-serif;">Green Shade Net & Polythene Sheet for Nursery bed</h2>
+         
+         
+          <p>Green Shade Net provide complete protection to plants kept
+            inside the shade and help in preventing plants from harsh
+            weather conditions. ... Best quality knitted shade nets (UV
+            Stabilized) of 50%,75% to protect against excessive sun light,
+            harmful UV rays, birds and heavy winds. It helps in controlling
+            temperature. Standard size of roll (3 Mtrs x 50 Mtrs) 
+            </p>
+            
+          
+
+          
+        </div>
+        <div class="lower ">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="a.jpg" alt="First slide" width="100%">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="tg2.jpg" alt="Second slide">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="bamboonet.jpeg" alt="Third slide">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+  
+        </div>
+    </div>
+  </div>
+</body>
+</html>
