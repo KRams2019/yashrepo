@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/contact-details.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/logo.css">
+  <!-- <script src="js/products-homepage.js"></script> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
@@ -17,22 +18,70 @@
 
 
   <style>
-    
-    *{
+    * {
       box-sizing: border-box;
     }
-  
-    @media screen and (max-width: 750px) {
-      .social-buttons {
-       display:inline-flex !important; 
+
+    .img-fluid {
+      height: 170px;
+      width: auto;
+      /*maintain aspect ratio*/
+      max-width: 500px;
+    }
+
+    .lower {
+      padding: 3%;
+      width: 25%;
+    }
+
+    @media screen and (max-width: 600px) {
+      .lower {
+        width: 100%;
+        padding-left: 5%;
       }
     }
-  
-  
+
+    .row {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE10 */
+      flex-wrap: wrap;
+      /* background-image: url("assets/background.jpg"); */
+      background-position: top;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+      /* Resize the background image to cover the entire container */
+      height: fit-content
+        /* You must set a specified height */
+    }
+
+
+    @media screen and (max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .mar-div {
+        max-width: 80%;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      .content {
+        max-width: 100% !important;
+      }
+    }
 
   
 
-   
+
+
 
     [class*="col-"] {
       float: left;
@@ -41,39 +90,134 @@
 
     /* For mobile phones: */
     [class*="col-"] {
-     width: 100%;
+      width: 100%;
     }
 
-   @media only screen and (min-width: 600px) {
-    /* For tablets: */
-     .col-s-1 {width: 8.33%;}
-     .col-s-2 {width: 16.66%;}
-     .col-s-3 {width: 25%;}
-     .col-s-4 {width: 33.33%;}
-     .col-s-5 {width: 41.66%;}
-     .col-s-6 {width: 50%;}
-     .col-s-7 {width: 58.33%;}
-     .col-s-8 {width: 66.66%;}
-     .col-s-9 {width: 75%;}
-     .col-s-10 {width: 83.33%;}
-     .col-s-11 {width: 91.66%;}
-     .col-s-12 {width: 100%;}
+    @media only screen and (min-width: 600px) {
+
+      /* For tablets: */
+      .col-s-1 {
+        width: 8.33%;
+      }
+
+      .col-s-2 {
+        width: 16.66%;
+      }
+
+      .col-s-3 {
+        width: 25%;
+      }
+
+      .col-s-4 {
+        width: 33.33%;
+      }
+
+      .col-s-5 {
+        width: 41.66%;
+      }
+
+      .col-s-6 {
+        width: 50%;
+      }
+
+      .col-s-7 {
+        width: 58.33%;
+      }
+
+      .col-s-8 {
+        width: 66.66%;
+      }
+
+      .col-s-9 {
+        width: 75%;
+      }
+
+      .col-s-10 {
+        width: 83.33%;
+      }
+
+      .col-s-11 {
+        width: 91.66%;
+      }
+
+      .col-s-12 {
+        width: 100%;
+      }
     }
-   @media only screen and (min-width: 768px) {
-     /* For desktop: */
-     .col-1 {width: 8.33%;}
-     .col-2 {width: 16.66%;}
-     .col-3 {width: 25%;}
-     .col-4 {width: 33.33%;}
-     .col-5 {width: 41.66%;}
-     .col-6 {width: 50%;}
-     .col-7 {width: 58.33%;}
-     .col-8 {width: 66.66%;}
-     .col-9 {width: 75%;}
-     .col-10 {width: 83.33%;}
-     .col-11 {width: 91.66%;}
-     .col-12 {width: 100%;}
+
+    @media only screen and (min-width: 768px) {
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
     }
+
+
+    .containers {
+      position: relative;
+      text-align: center;
+      color: rgba(24, 24, 6, 0.795);
+    }
+
+
+    .centered {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media screen and (max-width: 750px) {
+      .social-buttons {
+       display:inline-flex !important; 
+      }
+    }
+  
     .social-buttons {
       display: inline-block;
       /* background: rgba(256, 256, 256, 0.5); */
@@ -216,82 +360,101 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 }
 
 
-.containers {
-      position: relative;
-      text-align: center;
-      color: rgba(24, 24, 6, 0.795);
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item>div {
+      display: none;
     }
 
+    .carousel-inner .carousel-item>div:first-child {
+      display: block;
+    }
+  }
 
-    .centered {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  .carousel-inner .carousel-item.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    display: flex;
+  }
+
+  /* display 3 */
+  @media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
     }
 
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+  }
 
-    </style>
+  .carousel-inner .carousel-item-right,
+  .carousel-inner .carousel-item-left {
+    transform: translateX(0);
+  }
+  </style>
 </head>
 
 <body>
-    <div class="col-12 col-s-12 contact-details">
-        <div style="display:flex;"> <i class="fa fa-phone" style="font-size:24px"></i>
-          <h5> +91-9437053607,+91-9937072198 | </h5>
-        </div>
-        <div style="display:flex;"><i class="material-icons" style="font-size:24px">email</i>
-          <h5> hscsbp@gmail.com </h5>
-        </div>
-    
+  <div class="col-12 col-s-12 contact-details">
+    <div style="display:flex;"> <i class="fa fa-phone" style="font-size:24px"></i>
+      <h5> +91-9437053607,+91-9937072198 | </h5>
+    </div>
+    <div style="display:flex;"><i class="material-icons" style="font-size:24px">email</i>
+      <h5> hscsbp@gmail.com </h5>
+    </div>
+
+  </div>
+
+  <div class="row" style="background-color:  rgb(232, 250, 232);">
+    <div class="col-8 logo">
+      <div style="padding-left: 2%;">
+        <img src="assets/Logo.png" alt="logo" width="130px" height="80px">
+      </div>
+     
+    </div>
+    <div class="col-4">
+      <div class="social-buttons">
+        <!-- facebook  Button -->
+        <a href="https://www.facebook.com/AlluArjun/" target="blank" class="social-margin">
+          <div class="social-icon facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </div>
+        </a>
+       
+        <!-- LinkedIn Button -->
+        <!-- <a href="http://linkedin.com/" class="social-margin" target="blank">
+          <div class="social-icon linkedin">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </div>
+        </a> -->
+       
+        <!-- Youtube Button -->
+        <a href="http://youtube.com/" target="blank" class="social-margin">
+          <div class="social-icon youtube">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          </div>
+        </a>
+     
+        <!-- Soundcloud Button -->
+        <a href="http://soundcloud.com/" target="blank" class="social-margin">
+          <div class="social-icon soundcloud">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </a>
+        <!-- TwitterButton -->
+        <!-- <a href="http://twitter.com/" target="blank" class="social-margin">
+          <div class="social-icon twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+        </a> -->
       </div>
     
-      <div class="row" style="background-color:  rgb(232, 250, 232);">
-        <div class="col-8 logo">
-          <div style="padding-left: 2%;">
-            <img src="assets/Logo.png" alt="logo" width="130px" height="80px">
-          </div>
-         
-        </div>
-        <div class="col-4">
-          <div class="social-buttons">
-            <!-- facebook  Button -->
-            <a href="https://www.facebook.com/AlluArjun/" target="blank" class="social-margin">
-              <div class="social-icon facebook">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </div>
-            </a>
-           
-            <!-- LinkedIn Button -->
-<!--             <a href="http://linkedin.com/" class="social-margin" target="blank">
-              <div class="social-icon linkedin">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </div>
-            </a> -->
-           
-            <!-- Youtube Button -->
-            <a href="http://youtube.com/" target="blank" class="social-margin">
-              <div class="social-icon youtube">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-              </div>
-            </a>
-         
-            <!-- Soundcloud Button -->
-            <a href="http://soundcloud.com/" target="blank" class="social-margin">
-              <div class="social-icon soundcloud">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </div>
-            </a>
-            <!-- TwitterButton -->
-<!--             <a href="http://twitter.com/" target="blank" class="social-margin">
-              <div class="social-icon twitter">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </div>
-            </a> -->
-          </div>
-        
-        </div>
-      </div>
-    
+    </div>
+  </div>
       
       <!--Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #87e75a;">
@@ -324,12 +487,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     
         </div>
       </nav>
-          
-
-
-
-        
-
-
+         
 </body>
 </html>
