@@ -62,7 +62,7 @@
       } 
 
       .brands{
-      padding-left: 34% !important;
+      padding-left: 36% !important;
         padding-top: 2% !important;
        
       }
@@ -426,6 +426,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   .carousel-inner .carousel-item-left {
     transform: translateX(0);
   }
+
+  @media (max-width: 600px){
+    .certifiedBy {
+      display: grid !important ;
+     padding: 2%;
+  
+     
+    }
+
+    .certifiedBy >img{
+      height: 150px;
+      width:120px;
+    }
+  }
   </style>
 </head>
 
@@ -440,6 +454,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
 
   </div>
 
+  <div class="col-12 col-s-12" style="background-color: rgb(232, 250, 232);">
   <div class="row" style="background-color:  rgb(232, 250, 232);">
     <div class="col-8 logo">
       <div style="padding-left: 2%;">
@@ -487,6 +502,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
     </div>
   </div>
 
+</div>
   
   <!--Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #87e75a;">
@@ -535,18 +551,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', end
   </div>
 
 
-  <div>
+  <div  >
     <h3 style="text-align: center;padding:2% 3%;">Certified By</h3>
-    <div style="display: flex; justify-content: space-evenly">
+    <!-- <div>  style="display: flex; justify-content: space-evenly" -->
+
+      <div class="certifiedBy" style="display: flex; justify-content: space-evenly">     
       <img src="assets/1592899063_6b9HRz_GeM_1.jpg" alt="gem" width="10%" height="120px">
 
+   
       <img src="assets/msme-micro-small-medium-enterprises-logo-C4068C3A40-seeklogo.com.png" alt="msme" width="10%"
         height="120px">
 
       <img src="assets/download.png" alt="iso" width="10%" height="120px">
-
+       
+        
       <img src="assets/1.jpg" alt="bis" width="10%" height="120px">
-
+      
     </div>
   </div>
   
